@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:campus/datamodels/user/system_user.dart';
 import 'package:flutter/material.dart';
 import 'package:campus/locator.dart';
 import 'package:campus/services/navigation_service.dart';
@@ -28,11 +29,11 @@ class NavigationViewModel extends ChangeNotifier {
 
   User get currentUser => _navigationService.currentUser;
 
-  // Future<SystemUser> getSystemUser() => _navigationService.getSystemUser();
+  Future<SystemUser> getSystemUser() => _navigationService.getSystemUser();
 
-  // Future refresh() async {
-  //   await _navigationService.refreshUser();
-  //   notifyListeners();
-  // }
+  Future refresh() async {
+    await _navigationService.refreshUser();
+    notifyListeners();
+  }
 
 }

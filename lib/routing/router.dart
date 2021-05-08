@@ -1,17 +1,4 @@
-// import 'package:billboard_server_front/extensions/string_extensions.dart';
-// import 'package:iitu-campus-ios/routing/route_names.dart';
-// import 'package:billboard_server_front/services/api/firebase_auth_api.dart';
-// import 'package:billboard_server_front/services/navigation_service.dart';
-// import 'package:billboard_server_front/views/boards/pages/board_details/board_view.dart';
-// import 'package:billboard_server_front/views/boards/pages/board_list/boards_view.dart';
-// import 'package:billboard_server_front/views/contents/contents_view.dart';
-// import 'package:billboard_server_front/views/home/home_view.dart';
-// import 'package:billboard_server_front/views/partners/partners_view.dart';
-// import 'package:billboard_server_front/views/planning/widgets/planning_list_view.dart';
-// import 'package:billboard_server_front/views/planning/manage_plannings/plannings_manager_view.dart';
-// import 'package:billboard_server_front/views/reports/reports_view.dart';
-// import 'package:billboard_server_front/views/settings/settings_view.dart';
-// import 'package:billboard_server_front/views/sign_in/sign_in_view.dart';
+
 // import 'package:flutter/material.dart';
 // import 'package:flutter/widgets.dart';
 // import 'package:page_transition/page_transition.dart';

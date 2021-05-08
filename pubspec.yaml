@@ -40,6 +40,8 @@ dependencies:
   url_launcher: ^5.7.5
   url_launcher_web: ^0.1.4+1
   page_transition: ^1.1.5
+  outline_material_icons: ^0.1.1
+  json_annotation: ^3.0.1
 
 
 
@@ -50,4 +52,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: null
+  json_serializable: ^3.3.0
+  dapackages: ^1.1.1
+
 
