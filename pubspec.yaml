@@ -34,7 +34,7 @@ dependencies:
   mdi: ^4.0.0
   random_words: ^1.0.2
   # firebase_core: ^0.7.0
-  # firebase_auth: ^0.20.0+1
+  firebase_auth: ^0.20.0+1
   flutter_auth_buttons: ^0.10.0
   flutter_material_color_picker: ^1.0.5
   url_launcher: ^5.7.5

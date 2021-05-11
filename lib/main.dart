@@ -1,8 +1,7 @@
 import 'package:campus/locator.dart';
 import 'package:campus/theme.dart';
 import 'package:campus/viewmodels/navigation_viewmodel.dart';
-import 'package:campus/views/login/login_main_view.dart';
-import 'package:campus/views/login/login_view.dart';
+import 'package:campus/views/login/login_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:campus/routing/router.dart';
@@ -47,9 +46,8 @@ class MainApp extends StatelessWidget {
           unselectedWidgetColor: Color(0xFFf47920),
           toggleableActiveColor: Color(0xFFf47920),
       ),
-      home: SignInView(),
-      //LoginPage(),
-      //LogInView(),
+      home: 
+      LoginPage(),
 
       debugShowCheckedModeBanner: false
     );
