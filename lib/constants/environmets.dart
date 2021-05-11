@@ -8,5 +8,5 @@ bool get isInDebugMode {
 }
 
 String get baseUrl {
-  return isInDebugMode ? 'http://127.0.0.1:8000' : '';
+  return isInDebugMode ? 'http://3.21.244.168:8000/' : '';
 }

@@ -1,84 +1,57 @@
+import 'package:campus/locator.dart';
+import 'package:campus/theme.dart';
+import 'package:campus/viewmodels/navigation_viewmodel.dart';
+import 'package:campus/views/login/login_main_view.dart';
+import 'package:campus/views/login/login_view.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:campus/routing/router.dart';
+import 'package:campus/services/navigation_service.dart';
+import 'package:provider/provider.dart';
+//import 'package:firebase_core/firebase_core.dart';
 
 void main() {
-  runApp(MyApp());
+  setupLocator();
+  runApp(MainApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MainApp extends StatelessWidget {
+  MainApp({
+    Key key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+      return MaterialApp(
+      //navigatorKey: mainNavigatorKey,
+      title: 'Campus',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+
+          backgroundColor: Colors.white,
+          primaryColor: Colors.white,
+          fontFamily: 'Segoe UI',
+          cursorColor: Colors.black,
+          textTheme: TextTheme(
+            headline: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+            title: TextStyle(fontSize: 17.0, fontStyle: FontStyle.italic),
+            body1: TextStyle(fontSize: 14.0),
+          ),
+
+          inputDecorationTheme: InputDecorationTheme(
+            contentPadding: EdgeInsets.only(left: 2, bottom: 13.8),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
+            )
+          ),
+
+          unselectedWidgetColor: Color(0xFFf47920),
+          toggleableActiveColor: Color(0xFFf47920),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
+      home: SignInView(),
+      //LoginPage(),
+      //LogInView(),
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      debugShowCheckedModeBanner: false
     );
   }
 }
