@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:campus/locator.dart';
 import 'package:campus/services/api/firebase_auth_api.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+//import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
 class SignInViewModel extends ChangeNotifier {
-  final _authApi = locator<FirebaseAuthApi>();
+  //final _authApi = locator<FirebaseAuthApi>();
 
   final _loadingController = StreamController<bool>.broadcast();
   final _googleLoadingController = StreamController<bool>.broadcast();
@@ -25,14 +25,14 @@ class SignInViewModel extends ChangeNotifier {
     _loadingController.sink.add(false);
   }
 
-  Future<User> signInWithEmailAndPassword(String email, String password) async {
-    _loadingController.sink.add(true);
-    return _authApi
-        .signInWithEmailAndPassword(email: email, password: password)
-        .whenComplete(() {
-      _loadingController.sink.add(false);
-    });
-  }
+  // Future<User> signInWithEmailAndPassword(String email, String password) async {
+  //   _loadingController.sink.add(true);
+  //   return _authApi
+  //       .signInWithEmailAndPassword(email: email, password: password)
+  //       .whenComplete(() {
+  //     _loadingController.sink.add(false);
+  //   });
+  // }
 
   void clearError() {
     _error = '';

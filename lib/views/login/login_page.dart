@@ -1,3 +1,4 @@
+import 'package:campus/views/profile/profile_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:outline_material_icons/outline_material_icons.dart';
@@ -133,20 +134,23 @@ class _LoginPageState extends State<LoginPage> {
                         FlatButton(
                           padding: EdgeInsets.symmetric(
                               vertical: 12, horizontal: 80),
-                          onPressed: ()  async{
+                          onPressed:  () => 
+                          Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => ProfilePage())),
+
                            // if (validateAndSave()) {
                              // print(loginRequestModel.toJson());
-                             final email = emailController.text;
-                      final password = passwordController.text;
-                      await signInViewModel.signInWithEmailAndPassword(email, password);
+                      //        final email = emailController.text;
+                      // final password = passwordController.text;
+                      //await signInViewModel.signInWithEmailAndPassword(email, password);
                       // final navigation = context.read<NavigationViewModel>();
                       // navigation.navigateTo(PlaylistsRoute);
 
-                              setState(() {
-                                isApiCallProcess = true;
-                              });
+                              // setState(() {
+                              //   isApiCallProcess = true;
+                              // });
 
-                           },
+                          // },
                           child: Text(
                             "Login",
                             style: TextStyle(color: Colors.white),
